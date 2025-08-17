@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book a Room – Aurora Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="page">
+
+  <div class="topbar">
+    <div class="container inner">
+      <div>
+        <div class="logo">Aurora Hotel</div>
+        <div class="breadcrumbs"><a href="index.html" style="color:#fff;opacity:.8">Home</a> › Booking</div>
+      </div>
+      <a class="btn btn-ghost" href="index.html#rooms">Back to Rooms</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="row two">
+      <section class="card">
+        <div class="card-title">Guest Details</div>
+        <form id="bookingForm" action="php/process_booking.php" method="POST" novalidate>
+
+          <div class="row" style="grid-template-columns:1fr 1fr; gap:14px">
+            <div class="form-group" id="grp-name">
+              <label class="label">Full Name</label>
+              <input class="input" type="text" name="customer_name" id="name" placeholder="John Smith" required>
+              <div class="error-text">Enter first and last name.</div>
+            </div>
+
+            <div class="form-group" id="grp-email">
+              <label class="label">Email</label>
+              <input class="input" type="email" name="email" id="email" placeholder="example@email.com" required>
+              <div class="error-text">Enter a valid email.</div>
+            </div>
+
+            <div class="form-group" id="grp-phone">
+              <label class="label">Phone</label>
+              <input class="input" type="tel" name="phone" id="phone" placeholder="04XXXXXXXX" required>
+              <div class="error-text">Must start with 04 and be 10 digits.</div>
+            </div>
+
+            <div class="form-group" id="grp-date">
+              <label class="label">Check-in Date</label>
+              <input class="input" type="date" name="checkin_date" id="date" required>
+              <div class="error-text">Select a valid date.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="label">Room Type</label>
+              <input class="input" type="text" name="room_type" id="room_type" readonly>
+            </div>
+
+            <div class="form-group" id="grp-persons">
+              <label class="label">Number of Persons</label>
+              <input class="input" type="number" name="persons" id="persons" min="1" value="1" required>
+              <div class="error-text" id="cap-error">Exceeds room capacity.</div>
+            </div>
+          </div>
+
+          <div class="actions" style="margin-top:10px">
+            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            <a class="btn btn-ghost" href="index.html#rooms">Cancel</a>
+          </div>
+        </form>
+      </section>
+
+      <aside class="card summary">
+        <img id="roomImg" src="" alt="Room photo">
+        <div class="card-title" id="roomTitle">Room</div>
+        <div class="price" id="roomPrice">$—/night</div>
+        <ul style="line-height:1.8; padding-left:18px; color:#555; margin-top:10px" id="roomFeatures">
+          <li>Free Wi-Fi</li>
+          <li>Complimentary tea/coffee</li>
+          <li>24/7 front desk</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/booking.js"></script>
+</body>
+</html>

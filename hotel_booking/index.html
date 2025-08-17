@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aurora Hotel – Booking Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">Aurora Hotel</a>
+      <ul class="nav-links">
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Welcome to Aurora Hotel</h1>
+      <p>Luxury & Comfort at Your Fingertips</p>
+      <a href="#rooms" class="btn">Explore Rooms</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="rooms" class="rooms-section">
+      <h2>Our Rooms</h2>
+      <div class="rooms-grid">
+
+        <div class="room-card">
+          <img src="images/standard-twin.jpg" alt="Standard Twin">
+          <h3>Standard Twin</h3>
+          <p>2 single beds • 20m² • Free WiFi</p>
+          <p class="price">$120/night</p>
+          <div class="card-buttons">
+            <button class="btn-secondary"
+              onclick="window.location.href='php/check_availability.php?room=Standard Twin'">
+              Check Availability
+            </button>
+            <button class="btn-primary"
+              onclick="window.location.href='booking.html?room=Standard Twin&date=' + new Date().toISOString().slice(0,10)">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="images/executive-twin.png" alt="Executive Twin">
+          <h3>Executive Twin</h3>
+          <p>2 queen beds • 25m² • City view</p>
+          <p class="price">$150/night</p>
+          <div class="card-buttons">
+            <button class="btn-secondary"
+              onclick="window.location.href='php/check_availability.php?room=Executive Twin'">
+              Check Availability
+            </button>
+            <button class="btn-primary"
+              onclick="window.location.href='booking.html?room=Executive Twin&date=' + new Date().toISOString().slice(0,10)">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="images/superior-suite.png" alt="Superior Suite">
+          <h3>Superior Suite</h3>
+          <p>1 king bed • 35m² • Balcony</p>
+          <p class="price">$180/night</p>
+          <div class="card-buttons">
+            <button class="btn-secondary"
+              onclick="window.location.href='php/check_availability.php?room=Superior Suite'">
+              Check Availability
+            </button>
+            <button class="btn-primary"
+              onclick="window.location.href='booking.html?room=Superior Suite&date=' + new Date().toISOString().slice(0,10)">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="images/deluxe-suite.png" alt="Deluxe Suite">
+          <h3>Deluxe Suite</h3>
+          <p>1 king bed • 40m² • Pool view</p>
+          <p class="price">$220/night</p>
+          <div class="card-buttons">
+            <button class="btn-secondary"
+              onclick="window.location.href='php/check_availability.php?room=Deluxe Suite'">
+              Check Availability
+            </button>
+            <button class="btn-primary"
+              onclick="window.location.href='booking.html?room=Deluxe Suite&date=' + new Date().toISOString().slice(0,10)">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="images/executive-suite.png" alt="Executive Suite">
+          <h3>Executive Suite</h3>
+          <p>1 king bed • 45m² • Lounge Access</p>
+          <p class="price">$260/night</p>
+          <div class="card-buttons">
+            <button class="btn-secondary"
+              onclick="window.location.href='php/check_availability.php?room=Executive Suite'">
+              Check Availability
+            </button>
+            <button class="btn-primary"
+              onclick="window.location.href='booking.html?room=Executive Suite&date=' + new Date().toISOString().slice(0,10)">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="images/presidential-suite.png" alt="Presidential Suite">
+          <h3>Presidential Suite</h3>
+          <p>2 king beds • 60m² • Ocean view</p>
+          <p class="price">$500/night</p>
+          <div class="card-buttons">
+            <button class="btn-secondary"
+              onclick="window.location.href='php/check_availability.php?room=Presidential Suite'">
+              Check Availability
+            </button>
+            <button class="btn-primary"
+              onclick="window.location.href='booking.html?room=Presidential Suite&date=' + new Date().toISOString().slice(0,10)">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>📍 Sydney, Australia | 📞 +61 400 123 456</p>
+    <p>© 2025 Aurora Hotel Prototype</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

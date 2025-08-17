@@ -1,0 +1,89 @@
+/* General Styles */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,sans-serif;line-height:1.6;background:#f8f8f8;color:#333}
+a{text-decoration:none;color:inherit}
+
+/* Navbar */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:20px;background:#111;color:#fff;position:sticky;top:0;z-index:100}
+.logo{font-size:1.5rem;font-weight:bold;color:#fff}
+.nav-links{list-style:none;display:flex;gap:20px}
+.nav-links a{color:#fff;transition:.3s}
+.nav-links a:hover{color:#f39c12}
+
+/* Hero */
+.hero{height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:url('../images/hotel-hero.jpg') center/cover no-repeat;color:#fff;position:relative}
+.hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5)}
+.hero h1,.hero p,.hero .btn{position:relative;z-index:1}
+.hero h1{font-size:3rem;margin-bottom:10px}
+.hero p{font-size:1.2rem;margin-bottom:20px}
+.btn{background:#f39c12;color:#fff;padding:12px 24px;border:none;border-radius:5px;cursor:pointer;font-weight:bold;transition:.3s}
+.btn:hover{background:#d35400}
+
+/* Rooms */
+.rooms-section{padding:60px 20px;text-align:center}
+.rooms-section h2{font-size:2rem;margin-bottom:40px}
+.rooms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.room-card{background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1);overflow:hidden;transition:.3s}
+.room-card:hover{transform:translateY(-5px)}
+.room-card img{width:100%;height:180px;object-fit:cover}
+.room-card h3{margin:15px 0;font-size:1.3rem;color:#111}
+.room-card p{padding:0 15px 10px;color:#555}
+.room-card .price{font-weight:bold;color:#27ae60}
+.card-buttons{display:flex;justify-content:space-around;padding:15px}
+.btn-primary{background:#27ae60;color:#fff;padding:8px 16px;border:none;border-radius:5px;cursor:pointer;transition:.3s}
+.btn-primary:hover{background:#1e8449}
+.btn-secondary{background:#3498db;color:#fff;padding:8px 16px;border:none;border-radius:5px;cursor:pointer;transition:.3s}
+.btn-secondary:hover{background:#21618c}
+
+/* Footer */
+footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:40px}
+
+/* ===== UI Enhancements ===== */
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.page { background:#f7f7fb; min-height:100vh; }
+.page .topbar { background:#111; color:#fff; padding:14px 0; }
+.topbar .inner { display:flex; align-items:center; justify-content:space-between; }
+
+.breadcrumbs { color:#aaa; font-size:.9rem; margin-top:6px }
+.card { background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:20px; }
+.card + .card { margin-top:16px; }
+.card-title { font-size:1.25rem; font-weight:700; margin-bottom:12px; color:#111 }
+
+.row { display:grid; grid-template-columns: 1fr; gap:20px; }
+@media (min-width: 900px){ .row.two { grid-template-columns: 2fr 1fr; } }
+
+.input, select, input[type="date"], input[type="number"], input[type="text"], input[type="email"], input[type="tel"] {
+  width:100%; padding:12px 14px; border:1px solid #e5e7eb; border-radius:10px; outline:none;
+  background:#fff; transition:border .2s, box-shadow .2s; font-size:1rem;
+}
+.input:focus, select:focus, input:focus { border-color:#3498db; box-shadow:0 0 0 4px rgba(52,152,219,.15); }
+
+.form-group { margin-bottom:14px; }
+.label { display:block; margin-bottom:6px; color:#333; font-weight:600; }
+.error-text { color:#c0392b; font-size:.9rem; margin-top:6px; display:none; }
+.error .input { border-color:#e74c3c !important; }
+.error .error-text { display:block; }
+
+.btn { display:inline-block; padding:12px 18px; border:none; border-radius:10px; cursor:pointer; font-weight:700; }
+.btn-primary { background:#27ae60; color:#fff; }
+.btn-primary:hover { background:#1e8449; }
+.btn-secondary { background:#3498db; color:#fff; }
+.btn-secondary:hover { background:#21618c; }
+.btn-ghost { background:#fff; color:#333; border:1px solid #ddd; }
+.btn-ghost:hover { background:#f6f6f6; }
+
+.badge { display:inline-block; padding:6px 10px; border-radius:999px; font-weight:700; font-size:.85rem; }
+.badge-success { background:#eafaf1; color:#1e8449; }
+.badge-danger { background:#fdeced; color:#c0392b; }
+
+.status { display:flex; align-items:center; gap:10px; }
+.status .dot { width:10px; height:10px; border-radius:50%; }
+.dot.green { background:#27ae60; }
+.dot.red { background:#e74c3c; }
+
+.summary { position:sticky; top:16px; }
+.summary img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:10px; }
+.summary .price { font-size:1.2rem; font-weight:800; color:#27ae60; }
+
+.actions { display:flex; gap:10px; flex-wrap:wrap; }
+.center { text-align:center; }
